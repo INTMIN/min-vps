@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  traffmonetizer:
+    image: traffmonetizer/cli_v2
+    container_name: traffmonetizer
+    restart: unless-stopped
+    command: start accept --token ${TRAFF_TOKEN}
