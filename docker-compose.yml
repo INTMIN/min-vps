@@ -5,3 +5,10 @@ services:
     container_name: traffmonetizer
     restart: unless-stopped
     command: start accept --token ${TRAFF_TOKEN}
+
+  repocket:
+    image: repocket/repocket:latest
+    container_name: repocket
+    restart: unless-stopped
+    environment:
+      TOKEN: ${REPOCKET_TOKEN}
